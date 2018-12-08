@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Eventos</title>
+    <style>
+        body{
+            background-color: #efefef;
+        }
+        .box{
+            position: relative;
+            left:0;
+            width: 100px;
+            height:100px;
+            background-color: pink;
+        }
+        button{
+            font-size:2rem;
+            background-color:black;
+            color:#fff;
+            padding:1rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <hr>
+    <button id="next">next</button>
+    <button id="prev">prev</button>
+
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        var box = $(".box");
+        var next =$("#next");
+        var prev = $("#prev");
+        /*objeto com seletores css,tempo que vai ter em ms */
+        
+        /*start.hover(function(){
+            console.log("alguem")
+        })
+        Uma maneira de executar eventos*/
+
+        next.on("click",function(){
+            box.animate({
+                left:"800",
+                width:"300px",
+                height:"300px"
+            },5000)
+        })
+        prev.on("click",function(){
+            box.animate({
+                left:"0",
+                width:"100px",
+                height:"100px"
+            },5000)
+        })
+        /*Outra maneira*/
+        
+    </script>
+</body>
+</html>

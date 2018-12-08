@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - querySelectorAll</title>
+</head>
+<body>
+
+    <div class="teste">1</div>
+    <div class="teste">2</div>
+    <div class="teste">3</div>
+
+    <br>
+    <div id="pai">
+        <div class="filho">1</div>
+        <div class="filho">2</div>
+        <div class="filho">3</div>
+    </div>
+    <br>
+    <div id="paizao">
+        <div class="filho">alo</div>
+        <div class="filho">oi</div>
+        <div class="filho">ola</div>
+    </div>
+
+    <p>oi</p>
+    <p>Olá</p>
+
+    <script>
+        if(document.getElementById("pai").querySelectorAll(".filho").length > 1){
+            console.log("oi")
+        }
+
+        console.log(
+            document.getElementById("pai").querySelectorAll(".filho")
+        )
+        /*Faz NodeList de leitura*/
+    </script>
+
+</body>
+</html>

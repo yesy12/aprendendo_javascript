@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Delay</title>
+</head>
+<body>
+    <button>Click</button>
+    <div id="mensagem">Olá brasil</div>
+
+    <script src="../jquery-3.2.1.min.js"></script>
+
+    <script>
+        var mens = $("#mensagem");
+        var button = $("button");
+
+        button.on("click",function(){
+            mens.delay(500).fadeOut();
+            /*slow,fast,tempo ms*/
+        })
+
+
+    </script>
+</body>
+</html>

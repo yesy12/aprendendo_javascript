@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function nomedafuncao(){
+            return 1;
+        }
+        function valor(soma){
+            return ++soma;
+        }
+        function calculamedia(nota1,nota2,nota3){
+            return (nota1+nota2+nota3)/3;
+        }
+        var pessoa = {
+            nome:"Alison",idade:17,profissao:"Nenhuma",cidade:"SP"
+        };
+
+        function newpeople(objetoPessoa){
+            if(typeof objetoPessoa == "object"){
+                pessoa = objetoPessoa;
+                return true;
+            }else{
+                return false;
+            }
+        }/*altera variavel*/
+
+        function testeparametros(){
+            console.log(arguments);
+            return true;
+        }
+
+
+    </script>
+</body>
+</html>

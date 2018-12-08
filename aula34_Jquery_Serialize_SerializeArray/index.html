@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Serialize SerializeArray</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        <label for="cep">Cep</label>
+        <input type="text" name="cep" id="cep" placeholder="00000-000">
+        <label for="logradouro">Logradouro</label>
+        <input type="text" name="logradouro" id="logradouro" placeholder="Ave,Est,Rua">
+   
+        <button>Submit</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="resultado"></div>
+
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        var form = $("form");
+        var resultado = $(".resultado");
+
+        form.on("submit",function(evento){
+            evento.preventDefault();
+            
+            var data = $(this).serialize();
+
+            console.log(data);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evento hover</title>
+    <style>
+        td{
+            height: 30px;
+        }
+        .link{
+            color: dodgerblue;
+            text-transform: uppercase;
+        }
+        .trs{
+            background-color:black;
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" id="link">
+        <h1>Olá humanos, tudo bem?</h1>
+    </a>
+
+    <table style="width: 60%;">
+        <thead>
+            <th align="left">Nome</th>
+            <th align="left">Idade</th>
+        </thead>
+        <tbody>
+            <tr class="tr">
+                <td>Alien</td>
+                <td>2000</td>
+            </tr>
+            <tr class="tr">
+                <td>Bicho Papão</td>
+                <td>1000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var link = document.getElementById("link");
+        var trs = document.getElementsByClassName("tr");
+
+        link.addEventListener("mouseover",function(){
+            link.classList.add("link")
+        })
+        link.addEventListener("mouseleave",function(){
+            link.classList.remove("link")
+        })
+
+        for(let i = 0;i < trs.length;i++){
+            trs[i].addEventListener("mouseover",function(){
+                this.classList.add("trs")
+            })
+            trs[i].addEventListener("mouseleave",function(){
+                this.classList.remove("trs")
+            })           
+        }
+
+    </script>
+
+</body>
+</html>

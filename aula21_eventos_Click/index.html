@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos Click</title>
+</head>
+<body>
+    <div id="3"></div>
+    <h4 id="title">Meu botão</h4>
+    <button id="btn">Click</button>
+
+
+    <script>
+        var botao = document.getElementById("btn");
+        var title = document.getElementById("title");
+       
+        botao.addEventListener("click",function(){
+            title.remove()
+        })
+
+        /*elemento.adicionarevento("nome do evento",funçao que executa pós evento)*/
+    </script>
+</body>
+</html>

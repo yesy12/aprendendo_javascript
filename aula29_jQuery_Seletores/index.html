@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery - Seletores</title>
+</head>
+<body>
+    <p class="p1">Lorem1.</p>
+    <p class="p1">Lorem11.</p>
+    <p class="p1">Lorem12.</p>
+    <p class="p1">Lorem13.</p>
+    <p>Lorem2.</p>
+    <p id="p2">Lorem3.</p>
+    <p data-aula="p3">Lorem4.</p>
+
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script>
+        /*
+        JQuery == $
+        
+        */
+        var p1 = $(".p1").remove(); 
+        /*Igual a document.querySelector(".p1");*/
+        console.log(p1);
+    
+    </script>
+</body>
+</html>
